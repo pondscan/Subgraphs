@@ -65,8 +65,6 @@ Tracks the removal of owners, specifying the owner's address.
 Documents the addition of new owners, including the owner's address.
 
 
-For each additional entity (`NewStream`, `OuncesObserved`, `Unlock`, `OwnershipTransferred`, `Approval`, `Transfer`, `ClaimBooster`, `Mine`, `ExecutionSuccess`, `SafeReceived`, `ExecutionFailure`, `RemovedOwner`, `AddedOwner`), provide a structured description similar to the Lock entity.
-
 ## Data Sources and Mappings
 
 ### PondWater Data Source
@@ -130,7 +128,9 @@ For each additional entity (`NewStream`, `OuncesObserved`, `Unlock`, `OwnershipT
 - **Start Block**: `17790975`
 - **Entities**: `Transfer`
 - **Event Handlers**: 
-  - `handleERC20TransferEvent`: Provide an overview of ERC20 transfer events and describe how this handler processes such events.
+  - `handleERC20TransferEvent`: The `ERC20Template` Data Source serves as a dynamic interface for interacting with ERC20 token contracts on the Ethereum `mainnet`. This template is uniquely designed to adaptively connect with a range of ERC20 tokens, offering a flexible solution for indexing transaction data across diverse tokens. Utilizing the `ERC20.json` ABI ensures seamless integration with the standardized functions and events of ERC20 tokens.
+
+Initiating from block `17790975`, the focus is on capturing `Transfer` events, crucial for tracking the flow of tokens between addresses. The `handleERC20TransferEvent` is instrumental in this context, meticulously extracting and cataloging essential details from each transaction, such as the sender, recipient, and amount transferred. This approach not only enriches the dataset with granular transaction information but also provides invaluable context for deeper analysis of token distribution patterns, liquidity flows, and holder behavior within the Ethereum ecosystem. The `ERC20Template` thereby offers a comprehensive lens through which to view and understand the intricacies of ERC20 token transactions, enhancing the analytical depth available to users and researchers delving into the DeFi space.
 
 ## Querying the Subgraph
 
