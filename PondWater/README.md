@@ -153,6 +153,9 @@ After detailing the data sources and mappings, provide comprehensive examples an
 }
 ```
 
+This query directly fetches the latest 10 lock events, a task that, on a traditional block explorer like Etherscan, would involve manually sifting through transaction logs, decoding event data, and sorting them by timestamp—a significantly more tedious and less efficient process.
+
+
 ### Example 2: Aggregating Total Locked Value by Address
 
 ```graphql
