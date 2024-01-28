@@ -22,46 +22,47 @@ Schema location: `./schema.graphql` - Path to the GraphQL schema file.
 
 ## Entities
 
-`Lock` Represents lock events in the PondWater contract, detailing the locker's address, amount locked, duration, and related transaction metadata.
+`Lock`
+Represents lock events in the PondWater contract, detailing the locker's address, amount locked, duration, and related transaction metadata.
 
 `NewStream`
-  - Captures the creation of new streams, including the streamer's address, interval, and transaction details.
+Captures the creation of new streams, including the streamer's address, interval, and transaction details.
 
 `OuncesObserved`
-  - Logs observations of ounces, detailing the intervals observed, realized credits, debits, and associated transaction data.
+Logs observations of ounces, detailing the intervals observed, realized credits, debits, and associated transaction data.
 
 `Unlock`
-  - Records unlock events, specifying the locker's address, the related PondWater ID, and transaction information.
+Records unlock events, specifying the locker's address, the related PondWater ID, and transaction information.
 
 `OwnershipTransferred`
-  - Tracks the transfer of ownership, noting previous and new owners, along with the transaction context.
+Tracks the transfer of ownership, noting previous and new owners, along with the transaction context.
 
 `Approval`
-  - Details approval events, including owner, spender, value approved, and transaction specifics.
+Details approval events, including owner, spender, value approved, and transaction specifics.
 
 `Transfer`
-  - Logs token transfers, including sender, recipient, value, contract details, and transaction metadata.
+Logs token transfers, including sender, recipient, value, contract details, and transaction metadata.
 
 `ClaimBooster`
-  - Documents booster claims, specifying the claimer, booster ID, and related transaction information.
+Documents booster claims, specifying the claimer, booster ID, and related transaction information.
 
 `Mine`
-  - Captures mining events, detailing the miner's address, input and output amounts, booster ID, and transaction data.
+Captures mining events, detailing the miner's address, input and output amounts, booster ID, and transaction data.
 
 `ExecutionSuccess`
-  - Records successful executions, including the transaction hash and payment details.
+Records successful executions, including the transaction hash and payment details.
 
 `SafeRecieved`
-  - Logs the receipt of safes, including sender, value, and the receiving address's details.
+Logs the receipt of safes, including sender, value, and the receiving address's details.
 
 `ExecutionFailure`
-  - Notes failed executions, detailing the transaction hash and payment information.
+Notes failed executions, detailing the transaction hash and payment information.
 
 `RemovedOwner`
-  - Tracks the removal of owners, specifying the owner's address.
+Tracks the removal of owners, specifying the owner's address.
 
 `AddedOwner`
-  - Documents the addition of new owners, including the owner's address.
+Documents the addition of new owners, including the owner's address.
 
 
 For each additional entity (`NewStream`, `OuncesObserved`, `Unlock`, `OwnershipTransferred`, `Approval`, `Transfer`, `ClaimBooster`, `Mine`, `ExecutionSuccess`, `SafeReceived`, `ExecutionFailure`, `RemovedOwner`, `AddedOwner`), provide a structured description similar to the Lock entity.
