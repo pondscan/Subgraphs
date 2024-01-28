@@ -22,7 +22,7 @@ Schema location: `./schema.graphql` - Path to the GraphQL schema file.
 
 ## Entities
 
-- **Lock**
+- 'Lock'
   - Represents lock events in the PondWater contract, detailing the locker's address, amount locked, duration, and related transaction metadata.
 
 - **NewStream**
@@ -64,8 +64,6 @@ Schema location: `./schema.graphql` - Path to the GraphQL schema file.
 - **AddedOwner**
   - Documents the addition of new owners, including the owner's address.
 
-
-#### [Other Entities]
 
 For each additional entity (`NewStream`, `OuncesObserved`, `Unlock`, `OwnershipTransferred`, `Approval`, `Transfer`, `ClaimBooster`, `Mine`, `ExecutionSuccess`, `SafeReceived`, `ExecutionFailure`, `RemovedOwner`, `AddedOwner`), provide a structured description similar to the Lock entity.
 
