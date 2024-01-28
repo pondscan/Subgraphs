@@ -22,7 +22,7 @@ Schema location: `./schema.graphql` - Path to the GraphQL schema file.
 
 ## Entities
 
-- 'Lock'
+- `Lock`
   - Represents lock events in the PondWater contract, detailing the locker's address, amount locked, duration, and related transaction metadata.
 
 - **NewStream**
