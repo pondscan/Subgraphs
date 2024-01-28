@@ -135,33 +135,32 @@ Documents the addition of new owners, including the owner's address.
 
 After detailing the data sources and mappings, provide comprehensive examples and explanations for querying each entity within the subgraph. This section should enable users to understand how to retrieve and manipulate the data indexed by your subgraph effectively.
 
-### OwnershipTransferred Query
+## GraphQL Query Examples
+
+### Example 1: Fetching the Latest 10 Lock Events
 
 ```graphql
-query {
-  ownershipTransferreds {
+{
+  locks(first: 10, orderBy: blockTimestamp, orderDirection: desc) {
     id
-    previousOwner
-    newOwner
+    locker
+    locked
+    startsAt
+    lockedFor
     blockNumber
     blockTimestamp
-    transactionHash
   }
 }
 
-### Approval Query
+### Example 2: Aggregating Total Locked Value by Address
 
 ```graphql
-query {
-  approvals(where: {owner: "0x..."}, orderBy: value, orderDirection: desc) {
-    id
-    owner
-    spender
-    value
-    blockNumber
-    blockTimestamp
-    transactionHash
+{
+  locks(orderBy: locker) {
+    locker
+    locked
   }
 }
+
 
 
