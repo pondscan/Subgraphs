@@ -2,9 +2,9 @@
 
 ## Introduction
 
-The PondWater subgraph, powered by The Graph Protocol, is a transformative tool that significantly enhances the capabilities of the decentralized web. By meticulously indexing data from key Ethereum contracts, it unlocks a new realm of possibilities for developers and users alike. The Graph Protocol acts as a bridge between complex blockchain data and the end user, providing a structured and efficient way to access information that is often opaque and challenging to retrieve through traditional means.
+The PondWater subgraph, powered by The Graph Protocol, is a transformative tool that significantly enhances the capabilities of the decentralized web. By meticulously indexing data from key Pond0x contracts, it unlocks a new realm of possibilities for developers and users alike. The Graph Protocol acts as a bridge between complex blockchain data and the end user, providing a structured and efficient way to access information that is often opaque and challenging to retrieve through traditional means like block explorers.
 
-This subgraph taps into the rich vein of data produced by Pond0x contracts such as PondWater, PondClaims, PondCoin, MiningRigV3, GnosisProxySafe, and the Uniswap Factories & Routers. It indexes a wide array of events, from token transactions and contract interactions to more nuanced activities like mining operations and ownership transfers. What makes the PondWater subgraph particularly powerful is its ability to transform this raw data into a format that's easily queryable using GraphQL, a modern query language. This enables developers to craft precise queries to extract the exact data they need, whether for displaying transaction histories, monitoring activity, or interpretting real-time blockchain data into visuals for analysis.
+This subgraph taps into the rich vein of data produced by Pond0x contracts including PondWater, PondClaims, PondCoin, MiningRigV3, GnosisProxySafe, the Uniswap Factories & Routers, etc. It indexes a wide array of events, from token transactions and contract interactions to more nuanced activities like mining operations and swap. What makes the PondWater subgraph particularly powerful is its ability to transform this raw data into a format that's easily queryable using GraphQL, a modern query language. This enables users to craft precise queries to extract the exact data they need, whether for displaying transaction histories, monitoring activity or interpretting real-time blockchain data into visuals for analysis.
 
 Moreover, The Graph Protocol facilitates real-time data indexing, meaning the PondWater subgraph can offer up-to-the-minute data, a critical requirement for operating in the dynamic environments of crypto 2.0. This capability not only enhances user experience by providing timely and accurate information but also supports complex data analysis and decision-making processes that are essential in the fast-paced ecosystem.
 
@@ -20,21 +20,50 @@ In essence, the PondWater subgraph, by leveraging The Graph Protocol, becomes an
 
 Schema location: `./schema.graphql` - Path to the GraphQL schema file.
 
-### Entities
+## Entities
 
-#### Lock
+- **Lock**
+  - Represents lock events in the PondWater contract, detailing the locker's address, amount locked, duration, and related transaction metadata.
 
-- **Description**: Represents a lock event in the PondWater contract. Includes details such as the locker's address, the amount locked, the lock duration, and transaction metadata.
-- **Fields**:
-  - `id`: The unique identifier for the lock event.
-  - `locker`: The address of the locker.
-  - `PondWater_id`: The unique identifier for the PondWater event.
-  - `locked`: The amount locked.
-  - `startsAt`: The start time of the lock.
-  - `lockedFor`: The duration of the lock.
-  - `blockNumber`: The block number of the lock event.
-  - `blockTimestamp`: The timestamp of the block.
-  - `transactionHash`: The transaction hash of the lock event.
+- **NewStream**
+  - Captures the creation of new streams, including the streamer's address, interval, and transaction details.
+
+- **OuncesObserved**
+  - Logs observations of ounces, detailing the intervals observed, realized credits, debits, and associated transaction data.
+
+- **Unlock**
+  - Records unlock events, specifying the locker's address, the related PondWater ID, and transaction information.
+
+- **OwnershipTransferred**
+  - Tracks the transfer of ownership, noting previous and new owners, along with the transaction context.
+
+- **Approval**
+  - Details approval events, including owner, spender, value approved, and transaction specifics.
+
+- **Transfer**
+  - Logs token transfers, including sender, recipient, value, contract details, and transaction metadata.
+
+- **ClaimBooster**
+  - Documents booster claims, specifying the claimer, booster ID, and related transaction information.
+
+- **Mine**
+  - Captures mining events, detailing the miner's address, input and output amounts, booster ID, and transaction data.
+
+- **ExecutionSuccess**
+  - Records successful executions, including the transaction hash and payment details.
+
+- **SafeReceived**
+  - Logs the receipt of safes, including sender, value, and the receiving address's details.
+
+- **ExecutionFailure**
+  - Notes failed executions, detailing the transaction hash and payment information.
+
+- **RemovedOwner**
+  - Tracks the removal of owners, specifying the owner's address.
+
+- **AddedOwner**
+  - Documents the addition of new owners, including the owner's address.
+
 
 #### [Other Entities]
 
