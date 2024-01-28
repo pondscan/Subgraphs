@@ -22,46 +22,45 @@ Schema location: `./schema.graphql` - Path to the GraphQL schema file.
 
 ## Entities
 
-- `Lock`
-  - Represents lock events in the PondWater contract, detailing the locker's address, amount locked, duration, and related transaction metadata.
+`Lock` Represents lock events in the PondWater contract, detailing the locker's address, amount locked, duration, and related transaction metadata.
 
-- **NewStream**
+`NewStream`
   - Captures the creation of new streams, including the streamer's address, interval, and transaction details.
 
-- **OuncesObserved**
+`OuncesObserved`
   - Logs observations of ounces, detailing the intervals observed, realized credits, debits, and associated transaction data.
 
-- **Unlock**
+`Unlock`
   - Records unlock events, specifying the locker's address, the related PondWater ID, and transaction information.
 
-- **OwnershipTransferred**
+`OwnershipTransferred`
   - Tracks the transfer of ownership, noting previous and new owners, along with the transaction context.
 
-- **Approval**
+`Approval`
   - Details approval events, including owner, spender, value approved, and transaction specifics.
 
-- **Transfer**
+`Transfer`
   - Logs token transfers, including sender, recipient, value, contract details, and transaction metadata.
 
-- **ClaimBooster**
+`ClaimBooster`
   - Documents booster claims, specifying the claimer, booster ID, and related transaction information.
 
-- **Mine**
+`Mine`
   - Captures mining events, detailing the miner's address, input and output amounts, booster ID, and transaction data.
 
-- **ExecutionSuccess**
+`ExecutionSuccess`
   - Records successful executions, including the transaction hash and payment details.
 
-- **SafeReceived**
+`SafeRecieved`
   - Logs the receipt of safes, including sender, value, and the receiving address's details.
 
-- **ExecutionFailure**
+`ExecutionFailure`
   - Notes failed executions, detailing the transaction hash and payment information.
 
-- **RemovedOwner**
+`RemovedOwner`
   - Tracks the removal of owners, specifying the owner's address.
 
-- **AddedOwner**
+`AddedOwner`
   - Documents the addition of new owners, including the owner's address.
 
 
