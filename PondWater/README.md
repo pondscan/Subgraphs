@@ -174,7 +174,7 @@ This query filters for transfer events originating from "The Distillery" wallet,
 
 ```graphql
 {
-  transfers(where: {from: "TheDistilleryWalletAddress", value_gt: "10000000000000000000"}, first: 10, orderBy: blockTimestamp, orderDirection: desc) {
+  transfers(where: {from: "0x17CC6042605381c158D2adab487434Bde79Aa61C", value_gt: "100000000000000000000"}, first: 10, orderBy: blockTimestamp, orderDirection: desc) {
     id
     from
     to
@@ -186,6 +186,8 @@ This query filters for transfer events originating from "The Distillery" wallet,
   }
 }
 ```
+
+The PondWater subgraph streamlines the identification of significant transactions by directly querying and processing blockchain data, bypassing the cumbersome tasks of manual data retrieval, aggregation, and analysis typically required with traditional methods.
 
 
 
