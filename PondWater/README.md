@@ -166,10 +166,34 @@ This query directly fetches the latest 10 lock events, a task that, on a traditi
   }
 }
 ```
+This query streamlines the aggregation of total locked values by address, offering a clear efficiency gain over traditional methods that require manual tallying of individual transactions.
+
 
 ### Monitoring Significant Wallets: "The Distillery"
 
-To ensure transparency and maintain a high level of accountability, it's crucial to monitor significant transactions involving prominent wallets within the ecosystem. "The Distillery" wallet is one such example, where observing large value transfers can provide insights into its operational dynamics and financial strategies.
+To ensure transparency and maintain a high level of accountability, it's crucial to monitor significant transactions involving prominent wallets within the ecosystem. "The Distillery" wallet is one such example, where observing large value transfers can provide insights into its operational dynamics and real-time flow-of-funds. Let's write a query to simply give us the last 10 transations exceeding 100 ETH from the Gnosis multi-sig aka The Pond0x Distillery:
+
+##### Example Query: Tracking Large Transfers from "The Distillery"
+
+This query filters for transfer events originating from "The Distillery" wallet, specifically targeting transactions that exceed a significant value threshold, indicating substantial financial activity.
+
+```graphql
+{
+  transfers(where: {from: "0x17CC6042605381c158D2adab487434Bde79Aa61C", value_gt: "100000000000000000000"}, first: 10, orderBy: blockTimestamp, orderDirection: desc) {
+    id
+    from
+    to
+    value
+    blockNumber
+    blockTimestamp
+    tokenName
+    tokenSymbol
+  }
+}
+```
+
+The PondWater Subgraph streamlines the identification of significant transactions by directly querying and processing blockchain data, bypassing the cumbersome tasks of manual data retrieval, aggregation, and analysis typically required with traditional methods.
+
 
 #### Example Query: Tracking Large Transfers from "The Distillery"
 
@@ -190,7 +214,8 @@ This query filters for transfer events originating from "The Distillery" wallet,
 }
 ```
 
-The PondWater subgraph streamlines the identification of significant transactions by directly querying and processing blockchain data, bypassing the cumbersome tasks of manual data retrieval, aggregation, and analysis typically required with traditional methods.
+The PondWater Subgraph streamlines the identification of significant transactions by directly querying and processing blockchain data, bypassing the cumbersome tasks of manual data retrieval, aggregation, and analysis typically required with traditional methods.
+
 
 
 
