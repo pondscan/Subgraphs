@@ -1,4 +1,4 @@
-# Pond0x PondCOin ($PNDC) Subgraph
+# Pond0x PondCoin ($PNDC) Subgraph
 
 Welcome to the GitHub repository for the PondCoin Subgraph. This subgraph is designed to index and query data from the Ethereum blockchain specifically for the PondCoin ($PNDC) ecosystem, providing valuable insights and data analytics accessible through [The Graph](https://thegraph.com) decentralized API.
 
